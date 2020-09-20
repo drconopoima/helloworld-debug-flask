@@ -1,9 +1,6 @@
 from flask import Flask
 import debugpy
 
-debugpy.listen("0.0.0.0", 5678)
-debugpy.wait_for_client()
-
 app = Flask(__name__)
 
 
@@ -16,3 +13,5 @@ def helloworld():
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0")
+    debugpy.listen("0.0.0.0", 5678)
+    debugpy.wait_for_client()
